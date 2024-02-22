@@ -1,12 +1,16 @@
 .well{
     margin-right: 75%;
 }
-.navbar{
+/* .navbar{
     padding: 30px;
-}
+} */
 .row{
     padding: 30px
 }
 .panel{
     margin-right: 75%;
+}
+
+.navbar {
+    font-size: large;
 }

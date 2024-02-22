@@ -1,6 +1,6 @@
 import apiKeys from './config.js';
 
-let url = `https://api.sportsdata.io/v3/nhl/scores/json/Players?key=${apiKey}`
+let url = `https://api.sportsdata.io/v3/nhl/scores/json/Players?key=${apiKeys.apiKey1}`
 
 d3.json(url).then(function(data){
 
