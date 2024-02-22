@@ -1,5 +1,4 @@
-
-import apiKey from './config.js';
+import apiKeys from './config.js';
 
 let url = `https://api.sportsdata.io/v3/nhl/scores/json/Players?key=${apiKey}`
 
