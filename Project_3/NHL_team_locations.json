@@ -1,0 +1,322 @@
+[
+    {
+        "\ufeffyear": "1917",
+        "lgID": "NHL",
+        "tmID": "MTL",
+        "franchID": "MTL",
+        "name": "Montreal Canadiens",
+        "Seating Capacity": "21,302",
+        "Lat": "45.496111",
+        "Long": "-73.569444"
+    },
+    {
+        "\ufeffyear": "1917",
+        "lgID": "NHL",
+        "tmID": "OTS",
+        "franchID": "STE",
+        "name": "Ottawa Senators",
+        "Seating Capacity": "17,373",
+        "Lat": "45.296944",
+        "Long": "-75.927222"
+    },
+    {
+        "\ufeffyear": "1917",
+        "lgID": "NHL",
+        "tmID": "TOA",
+        "franchID": "TOR",
+        "name": "Toronto Maple Leafs",
+        "Seating Capacity": "18,819",
+        "Lat": "43.643333",
+        "Long": "-79.379167"
+    },
+    {
+        "\ufeffyear": "1924",
+        "lgID": "NHL",
+        "tmID": "BOS",
+        "franchID": "BOS",
+        "name": "Boston Bruins",
+        "Seating Capacity": "17,565",
+        "Lat": "42.366303",
+        "Long": "-71.062228"
+    },
+    {
+        "\ufeffyear": "1926",
+        "lgID": "NHL",
+        "tmID": "NYR",
+        "franchID": "NYR",
+        "name": "New York Rangers",
+        "Seating Capacity": "18,006",
+        "Lat": "40.750556",
+        "Long": "-73.993611"
+    },
+    {
+        "\ufeffyear": "1926",
+        "lgID": "NHL",
+        "tmID": "DTC",
+        "franchID": "DET",
+        "name": "Detroit Red Wings",
+        "Seating Capacity": "19,515",
+        "Lat": "42.551262",
+        "Long": "-83.217862"
+    },
+    {
+        "\ufeffyear": "1926",
+        "lgID": "NHL",
+        "tmID": "CHI",
+        "franchID": "CHI",
+        "name": "Chicago Blackhawks",
+        "Seating Capacity": "19,717",
+        "Lat": "41.880556",
+        "Long": "-87.674167"
+    },
+    {
+        "\ufeffyear": "1967",
+        "lgID": "NHL",
+        "tmID": "STL",
+        "franchID": "STL",
+        "name": "St. Louis Blues",
+        "Seating Capacity": "18,724",
+        "Lat": "38.626667",
+        "Long": "-90.2025"
+    },
+    {
+        "\ufeffyear": "1967",
+        "lgID": "NHL",
+        "tmID": "PIT",
+        "franchID": "PIT",
+        "name": "Pittsburgh Penguins",
+        "Seating Capacity": "18,387",
+        "Lat": "40.439444",
+        "Long": "-79.989167"
+    },
+    {
+        "\ufeffyear": "1967",
+        "lgID": "NHL",
+        "tmID": "PHI",
+        "franchID": "PHI",
+        "name": "Philadelphia Flyers",
+        "Seating Capacity": "19,543",
+        "Lat": "39.901111",
+        "Long": "-75.171944"
+    },
+    {
+        "\ufeffyear": "1967",
+        "lgID": "NHL",
+        "tmID": "DAL",
+        "franchID": "DAL",
+        "name": "Dallas Stars",
+        "Seating Capacity": "18,532",
+        "Lat": "32.790556",
+        "Long": "-96.810278"
+    },
+    {
+        "\ufeffyear": "1967",
+        "lgID": "NHL",
+        "tmID": "LAK",
+        "franchID": "LAK",
+        "name": "Los Angeles Kings",
+        "Seating Capacity": "18,230",
+        "Lat": "34.043056",
+        "Long": "-118.267222"
+    },
+    {
+        "\ufeffyear": "1970",
+        "lgID": "NHL",
+        "tmID": "VAN",
+        "franchID": "VAN",
+        "name": "Vancouver Canucks",
+        "Seating Capacity": "18,910",
+        "Lat": "49.277778",
+        "Long": "-123.108889"
+    },
+    {
+        "\ufeffyear": "1970",
+        "lgID": "NHL",
+        "tmID": "BUF",
+        "franchID": "BUF",
+        "name": "Buffalo Sabres",
+        "Seating Capacity": "19,070",
+        "Lat": "42.875",
+        "Long": "-78.876389"
+    },
+    {
+        "\ufeffyear": "1972",
+        "lgID": "NHL",
+        "tmID": "NYI",
+        "franchID": "NYI",
+        "name": "New York Islanders",
+        "Seating Capacity": "15,795",
+        "Lat": "40.682661",
+        "Long": "-73.975225"
+    },
+    {
+        "\ufeffyear": "1972",
+        "lgID": "NHL",
+        "tmID": "CAL",
+        "franchID": "CAL",
+        "name": "Calgary Flames",
+        "Seating Capacity": "19,289",
+        "Lat": "51.0375",
+        "Long": "-114.051944"
+    },
+    {
+        "\ufeffyear": "1974",
+        "lgID": "NHL",
+        "tmID": "WAS",
+        "franchID": "WAS",
+        "name": "Washington Capitals",
+        "Seating Capacity": "18,506",
+        "Lat": "38.898056",
+        "Long": "-77.020833"
+    },
+    {
+        "\ufeffyear": "1974",
+        "lgID": "NHL",
+        "tmID": "NJD",
+        "franchID": "NJD",
+        "name": "New Jersey Devils",
+        "Seating Capacity": "16,514",
+        "Lat": "40.733611",
+        "Long": "-74.171111"
+    },
+    {
+        "\ufeffyear": "1979",
+        "lgID": "NHL",
+        "tmID": "COL",
+        "franchID": "COL",
+        "name": "Colorado Avalanche",
+        "Seating Capacity": "17,809",
+        "Lat": "39.748611",
+        "Long": "-105.0075"
+    },
+    {
+        "\ufeffyear": "1979",
+        "lgID": "NHL",
+        "tmID": "PHO",
+        "franchID": "PHO",
+        "name": "Phoenix Coyotes",
+        "Seating Capacity": "17,125",
+        "Lat": "33.531944",
+        "Long": "-112.26111"
+    },
+    {
+        "\ufeffyear": "1979",
+        "lgID": "NHL",
+        "tmID": "CAR",
+        "franchID": "CAR",
+        "name": "Carolina Hurricanes",
+        "Seating Capacity": "18,680",
+        "Lat": "35.803333",
+        "Long": "-78.721944"
+    },
+    {
+        "\ufeffyear": "1979",
+        "lgID": "NHL",
+        "tmID": "EDM",
+        "franchID": "EDM",
+        "name": "Edmonton Oilers",
+        "Seating Capacity": "18,347",
+        "Lat": "53.571389",
+        "Long": "-113.456111"
+    },
+    {
+        "\ufeffyear": "1991",
+        "lgID": "NHL",
+        "tmID": "SJS",
+        "franchID": "SJS",
+        "name": "San Jose Sharks",
+        "Seating Capacity": "17,562",
+        "Lat": "37.332778",
+        "Long": "-121.901111"
+    },
+    {
+        "\ufeffyear": "1992",
+        "lgID": "NHL",
+        "tmID": "TBL",
+        "franchID": "TBL",
+        "name": "Tampa Bay Lightning",
+        "Seating Capacity": "19,092",
+        "Lat": "27.942778",
+        "Long": "-82.451944"
+    },
+    {
+        "\ufeffyear": "1993",
+        "lgID": "NHL",
+        "tmID": "ANA",
+        "franchID": "ANA",
+        "name": "Anaheim Ducks",
+        "Seating Capacity": "17,174",
+        "Lat": "33.807778",
+        "Long": "-117.87667"
+    },
+    {
+        "\ufeffyear": "1993",
+        "lgID": "NHL",
+        "tmID": "FLO",
+        "franchID": "FLO",
+        "name": "Florida Panthers",
+        "Seating Capacity": "19,250",
+        "Lat": "26.158333",
+        "Long": "-80.325556"
+    },
+    {
+        "\ufeffyear": "1998",
+        "lgID": "NHL",
+        "tmID": "NAS",
+        "franchID": "NAS",
+        "name": "Nashville Predators",
+        "Seating Capacity": "17,113",
+        "Lat": "36.159167",
+        "Long": "-86.778611"
+    },
+    {
+        "\ufeffyear": "1999",
+        "lgID": "NHL",
+        "tmID": "WPG",
+        "franchID": "WPG",
+        "name": "Winnipeg Jets",
+        "Seating Capacity": "15,321",
+        "Lat": "49.892778",
+        "Long": "-97.143611"
+    },
+    {
+        "\ufeffyear": "2000",
+        "lgID": "NHL",
+        "tmID": "CBS",
+        "franchID": "CBS",
+        "name": "Columbus Blue Jackets",
+        "Seating Capacity": "18,144",
+        "Lat": "39.969283",
+        "Long": "-83.006111"
+    },
+    {
+        "\ufeffyear": "2000",
+        "lgID": "NHL",
+        "tmID": "MIN",
+        "franchID": "MIN",
+        "name": "Minnesota Wild",
+        "Seating Capacity": "17,954",
+        "Lat": "44.944722",
+        "Long": "-93.101111"
+    },
+    {
+        "\ufeffyear": "2016",
+        "lgID": "NHL",
+        "tmID": "VGK",
+        "franchID": "VGK",
+        "name": "Vegas Golden Knights",
+        "Seating Capacity": "17,368",
+        "Lat": "36.102778",
+        "Long": "-115.178333"
+    },
+    {
+        "\ufeffyear": "2021",
+        "lgID": "NHL",
+        "tmID": "SEA",
+        "franchID": "SEA",
+        "name": "Seattle Kraken",
+        "Seating Capacity": "17,459",
+        "Lat": "47.622",
+        "Long": "-122.354"
+    }
+]
