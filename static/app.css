@@ -1,15 +1,25 @@
 .well{
     margin-right: 75%;
 }
-/* .navbar{
+.navbar{
     padding: 30px;
-} */
+}
 .row{
     padding: 30px
 }
-.panel{
-    margin-right: 75%;
+.panel, .well {
+    margin-right: 55%;
+    /* background-color: rgb(85, 202, 202); */
+    border-radius: 1%;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px;
+    display: inline-block;
+    
 }
+
+
 
 .navbar {
     font-size: large;
