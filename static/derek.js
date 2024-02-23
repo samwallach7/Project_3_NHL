@@ -9,9 +9,9 @@ function init(){
         data.sort((a, b) => a.FirstName.localeCompare(b.FirstName));
 
         // Populate the dropdown menu with player names
-        var dropdown = document.getElementById("selDataset");
+        let dropdown = document.getElementById("selDataset");
         data.forEach(function(player) {
-            var option = document.createElement("option");
+            let option = document.createElement("option");
             option.value = player.PlayerID;
             option.text = `${player.FirstName} ${player.LastName}`;
             dropdown.appendChild(option);
@@ -75,40 +75,50 @@ d3.json(url).then(function(data){
 }
 
 function createTable(playerId) {
-    d3.json(url1).then(function(data) {
+  d3.json(url1).then(function(data) {
       const table = document.createElement('table');
       const header = table.createTHead();
       const headerRow = header.insertRow();
-      const fields = ['Name', 'Assists', 'Blocks', 'FaceoffsWon', 'FantasyPoints', 'Games', 'Hits', 'Minutes', 'PenaltyMinutes', 'ShotsOnGoal', 'Takeaways', 'Updated'];
+      const fields = ['Name', 'PlayerID', 'Assists', 'Blocks', 'FaceoffsWon', 'FantasyPoints', 'Games', 'Hits', 'Minutes', 'PenaltyMinutes', 'Season', 'ShotsOnGoal', 'Takeaways', 'Updated'];
       
       fields.forEach(field => {
-        const th = document.createElement('th');
-        th.textContent = field;
-        headerRow.appendChild(th);
+          const th = document.createElement('th');
+          th.textContent = field;
+          th.style.backgroundColor = 'black'; // Set header background color to black
+          th.style.color = 'white';
+          th.style.border = '1px solid white'; // Set header text color to white
+          th.style.padding = '2px';
+          th.style.textAlign = 'center'
+          headerRow.appendChild(th);
       });
-  
+
       const body = table.createTBody();
       data.forEach(obj => {
-        if(obj.PlayerID === playerId) {
-          const row = body.insertRow();
-          fields.forEach(field => {
-            const cell = row.insertCell();
-            cell.textContent = obj[field];
-          });
-        }
+          if(obj.PlayerID == playerId) {
+              const row = body.insertRow();
+              fields.forEach(field => {
+                  const cell = row.insertCell();
+                  cell.textContent = obj[field];
+                  cell.style.border = '1px solid black';
+                  cell.style.padding = '2px'
+                  cell.style.textAlign = 'center'
+              });
+              row.style.backgroundColor = 'grey'; // Set row background color to grey
+          }
       });
-  
-      //remove existing table if it exists
+
+      // Remove existing table if it exists
       const existingTable = document.getElementById('playerTable');
       if(existingTable) {
-        existingTable.remove();
+          existingTable.remove();
       }
 
-      //append the new table to the body
+      // Append the new table to the body
       table.id = 'playerTable';
       document.body.appendChild(table);
-    });
+  });
 }
+
   
 
-init()
+init();
