@@ -4,32 +4,27 @@ let url = `https://api.sportsdata.io/v3/nhl/scores/json/Players?key=${apiKeys.ap
 let url1 =`https://api.sportsdata.io/v3/nhl/stats/json/PlayerSeasonStats/2024?key=${apiKeys.apiKey1}`
 
 function init(){
-    
     d3.json(url).then(function(data){
+        // Sort the data by first name
+        data.sort((a, b) => a.FirstName.localeCompare(b.FirstName));
 
-        // console.log(data)
+        // Populate the dropdown menu with player names
+        var dropdown = document.getElementById("selDataset");
+        data.forEach(function(player) {
+            var option = document.createElement("option");
+            option.value = player.PlayerID;
+            option.text = `${player.FirstName} ${player.LastName}`;
+            dropdown.appendChild(option);
+        });
 
-        let dropDownmenu = d3.select("#selDataset")
-        
-        let formattedNames = []
-
-        for (let i = 0; i < data.length; i++) {
-            let fullName = data[i].FirstName + " " + data[i].LastName;
-            formattedNames.push(fullName);
-        }
-        
-        formattedNames.sort();
-        
-        for (let i = 0; i < formattedNames.length; i++) {
-            dropDownmenu.append('option')
-            .text(formattedNames[i]);
-        }
-
-        let firstPlayer = data[0]
+        let firstPlayer = data[0];
         playerData(firstPlayer.PlayerID); // Pass the playerId
-        createTable(firstPlayer.PlayerID)
+        createTable(firstPlayer.PlayerID);
     });
 }
+
+
+
 
 
 function optionChanged(value){
@@ -84,7 +79,7 @@ function createTable(playerId) {
       const table = document.createElement('table');
       const header = table.createTHead();
       const headerRow = header.insertRow();
-      const fields = ['Name', 'PlayerID', 'Assists', 'Blocks', 'FaceoffsWon', 'FantasyPoints', 'Games', 'Hits', 'Minutes', 'PenaltyMinutes', 'ShotsOnGoal', 'Takeaways', 'Updated'];
+      const fields = ['Name', 'Assists', 'Blocks', 'FaceoffsWon', 'FantasyPoints', 'Games', 'Hits', 'Minutes', 'PenaltyMinutes', 'ShotsOnGoal', 'Takeaways', 'Updated'];
       
       fields.forEach(field => {
         const th = document.createElement('th');
