@@ -29,14 +29,15 @@ def csv_to_json(csv_file, json_file):
     # Convert certain columns to numbers
     for row in data:
         row['Year'] = int(row['Year'])
-        row['SeatingCapacity'] = int(row['SeatingCapacity'])
         row['Lat'] = float(row['Lat'])
         row['Long'] = float(row['Long'])
         row['totalSeasons'] = int(row['totalSeasons'])
+        row['pointPercent'] = float(row['pointPercent'])
         row['playoffSeasons'] = int(row['playoffSeasons'])
         row['playoffPercent'] = float(row['playoffPercent'])
         row['SCAppearances'] = int(row['SCAppearances'])
         row['StanleyCupWins'] = int(row['StanleyCupWins'])
+        row['lastSeason'] = int(row['lastSeason'])
 
     # Write JSON file
     with open(json_file, 'w') as file:
