@@ -74,6 +74,8 @@ d3.json(url).then(function(data){
     });
 }
 
+//function to create a table based on the player selection
+//chatgpt helped generate some of this code**
 function createTable(playerId) {
   d3.json(url1).then(function(data) {
       const table = document.createElement('table');
@@ -84,9 +86,9 @@ function createTable(playerId) {
       fields.forEach(field => {
           const th = document.createElement('th');
           th.textContent = field;
-          th.style.backgroundColor = 'black'; // Set header background color to black
+          th.style.backgroundColor = 'black';
           th.style.color = 'white';
-          th.style.border = '1px solid white'; // Set header text color to white
+          th.style.border = '1px solid white';
           th.style.padding = '2px';
           th.style.textAlign = 'center'
           headerRow.appendChild(th);
@@ -103,17 +105,17 @@ function createTable(playerId) {
                   cell.style.padding = '2px'
                   cell.style.textAlign = 'center'
               });
-              row.style.backgroundColor = 'grey'; // Set row background color to grey
+              row.style.backgroundColor = 'grey';
           }
       });
 
-      // Remove existing table if it exists
+      //remove existing table if it exists
       const existingTable = document.getElementById('playerTable');
       if(existingTable) {
           existingTable.remove();
       }
 
-      // Append the new table to the body
+      //append the new table to the body
       table.id = 'playerTable';
       document.body.appendChild(table);
   });
