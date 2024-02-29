@@ -1,7 +1,7 @@
 import apiKeys from './config.js';
 
-let url = `https://api.sportsdata.io/v3/nhl/scores/json/Players?key=${apiKeys.apiKey1}`
-let url1 =`https://api.sportsdata.io/v3/nhl/stats/json/PlayerSeasonStats/2024?key=${apiKeys.apiKey1}`
+let url = "http://127.0.0.1:5000/nhl/players"
+let url1 ="http://127.0.0.1:5000/nhl/players/2024"
 
 function init(){
     d3.json(url).then(function(data){
