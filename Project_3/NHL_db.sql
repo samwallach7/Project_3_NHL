@@ -133,3 +133,21 @@ WHERE sequence_schema = 'public' AND sequence_name = 'name';
 
 -- Find the maximum UniqueID
 SELECT MAX("UniqueID") + 1 FROM public."Awards";
+
+-- Remake the Goalies table
+-- Drop the existing "Goalies" table if needed
+DROP TABLE IF EXISTS "Goalies";
+
+-- Recreate the "Goalies" table with columns in the desired order
+CREATE TABLE "Goalies" (
+  "UniqueID" VARCHAR PRIMARY KEY,
+  "PlayerID" VARCHAR,
+  "TeamID" VARCHAR,
+  "LeagueID" VARCHAR,
+  "Games_Played" FLOAT,
+  "Minutes_Played" FLOAT, -- Changed data type to FLOAT
+  "Wins" FLOAT, -- Changed data type to FLOAT
+  "Losses" FLOAT, -- Changed data type to FLOAT
+  "Year" INT
+);
+
