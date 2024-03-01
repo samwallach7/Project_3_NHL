@@ -150,14 +150,25 @@ function getMLCustomIcon(team) {
 
 // Create the map object
 let map = L.map("map", {
-    center: [42.00, -95.71],
+    center: [41.00, -90.00],
     zoom: 4
 });
 
 // Add the base tile layer
-let baseLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+let street = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 }).addTo(map);
+
+let topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+});
+
+// Set basemaps
+let baseMaps = {
+Street: street,
+Topo: topo
+
+};
 
 // Define list variables
 let teamMarkers = []; // Array to store team markers
@@ -181,6 +192,12 @@ for (let i = 0; i < jsonData.length; i++) {
         <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         teamMarkers.push(activeMarker); // Push marker to array
+
+        // Add animation to the marker with CSS
+        activeMarker.on('click', function() {
+            activeMarker._icon.classList.toggle('dimmed-marker'); // Dim the clicked marker
+            activeMarker._icon.classList.toggle('highlighted-marker'); // Highlight the marker
+        });
     }
 }
 
@@ -194,6 +211,12 @@ for (let i = 0; i < jsonData.length; i++) {
         <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         ecMarkers.push(ecMarker); // Push marker to array
+
+        // Add animation to the marker with CSS
+        ecMarker.on('click', function() {
+            ecMarker._icon.classList.toggle('dimmed-marker'); // Dim the clicked marker
+            ecMarker._icon.classList.toggle('highlighted-marker'); // Highlight the marker
+        });
     }
 }
 
@@ -207,6 +230,12 @@ for (let i = 0; i < jsonData.length; i++) {
         <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         wcMarkers.push(wcMarker); // Push marker to array
+
+        // Add animation to the marker with CSS
+        wcMarker.on('click', function() {
+            wcMarker._icon.classList.toggle('dimmed-marker'); // Dim the clicked marker
+            wcMarker._icon.classList.toggle('highlighted-marker'); // Highlight the marker
+        });
     }
 }
 
@@ -220,6 +249,12 @@ for (let i = 0; i < jsonData.length; i++) {
         <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         scMarkers.push(scMarker); // Push marker to array
+
+        // Add animation to the marker with CSS
+        scMarker.on('click', function() {
+            scMarker._icon.classList.toggle('dimmed-marker'); // Dim the clicked marker
+            scMarker._icon.classList.toggle('highlighted-marker'); // Highlight the marker
+        });
     }
 }
 
@@ -233,6 +268,12 @@ for (let i = 0; i < jsonData.length; i++) {
         <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         playoffMarkers.push(playoffMarker); // Push marker to array
+
+        // Add animation to the marker with CSS
+        playoffMarker.on('click', function() {
+            playoffMarker._icon.classList.toggle('dimmed-marker'); // Dim the clicked marker
+            playoffMarker._icon.classList.toggle('highlighted-marker'); // Highlight the marker
+        });
     }
 }
 
@@ -246,6 +287,12 @@ for (let i = 0; i < jsonData.length; i++) {
         <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         seasonsMarkers.push(seasonsMarker); // Push marker to array
+
+        // Add animation to the marker with CSS
+        seasonsMarker.on('click', function() {
+            seasonsMarker._icon.classList.toggle('dimmed-marker'); // Dim the clicked marker
+            seasonsMarker._icon.classList.toggle('highlighted-marker'); // Highlight the marker
+        });
     }
 }
 
@@ -259,6 +306,12 @@ for (let i = 0; i < jsonData.length; i++) {
         <br>Percent of Seasons in Playoffs: ${team.playoffPercent}<br>Stanley Cup Appearances: ${team.SCAppearances}
         <br>Stanley Cup Titles: ${team.StanleyCupWins}<br>Last Season: ${team.lastSeason}`);
         defunctMarkers.push(defunctMarker); // Push marker to array
+
+        // Add animation to the marker with CSS
+        defunctMarker.on('click', function() {
+            defunctMarker._icon.classList.toggle('dimmed-marker'); // Dim the clicked marker
+            defunctMarker._icon.classList.toggle('highlighted-marker'); // Highlight the marker
+        });
     }
 }
 
@@ -270,8 +323,69 @@ for (let i = 0; i < jsonData.length; i++) {
         teamMoveMarker.bindPopup(`<h2>${team.teamName}</h2><hr> Year Founded: ${team.year}
         <br>Franchise: ${team.franchID}<br>Total Seasons: ${team.totalSeasons}<br>Last Season: ${team.lastSeason}
         <br>Team Changed To: ${team.teamChange}`);
+
+        // Add animation to the marker with CSS
+        teamMoveMarker.on('click', function() {
+            teamMoveMarker._icon.classList.toggle('dimmed-marker'); // Dim the clicked marker
+            teamMoveMarker._icon.classList.toggle('highlighted-marker'); // Highlight the marker
+            // Define the line variables
+            let line = [[team.lat, team.long], [team.teamChangeLat, team.teamChangeLong]];
+            animateMarkerAlongLine(teamMoveMarker, line);
+        });
+
         teamMoveMarkers.push(teamMoveMarker); // Push marker to array
+
+        // Define the line variables
+        let line = [[team.lat, team.long], [team.teamChangeLat, team.teamChangeLong]];
+        let teamMovePolyline = L.polyline(line, {color: "red"});
+        teamMovePolyline.bindPopup(`<h4>${team.lastSeason}: ${team.teamName} became the ${team.teamChange}</h4>`);
+        
+        // Define a variable to track the click state of the polyline
+        let polylineClicked = false;
+
+        teamMovePolyline.on('click', function() {
+            // Toggle the click state of the polyline
+            polylineClicked = !polylineClicked;
+            
+            // Apply the color change and dash animation
+            if (polylineClicked) {teamMovePolyline.setStyle({color: 'green', dashArray: '10, 10'});}
+            else {teamMovePolyline.setStyle({color: 'red', dashArray: null});} // Revert color and remove dash animation
+
+            // Reset the line style after 5 seconds
+            setTimeout(function() {
+                teamMovePolyline.setStyle({color: 'red', dashArray: null, opacity: 1});
+            }, 5000); // The desired duration in milliseconds
+        });
+        teamMoveMarkers.push(teamMovePolyline); // Push line to array
     }
+}
+
+// Function to animate marker along line
+function animateMarkerAlongLine(teamMoveMarker, line) {
+    let animationProperties = {
+      duration: 3000, // Animation duration in milliseconds
+      easing: 'linear' // Animation easing function
+    };
+  
+    anime({
+      targets: teamMoveMarker._icon,
+      translateX: line.map(coord => coord[1]),
+      translateY: line.map(coord => coord[0]),
+      easing: animationProperties.easing,
+      duration: animationProperties.duration,
+      update: function(anim) {
+        // Update marker position during animation
+        let lng = line[line.length - 1][1]; // Endpoint's longitude
+        let lat = line[line.length - 1][0]; // Endpoint's latitude
+        teamMoveMarker.setLatLng([lat, lng]);
+      },
+      complete: function() {
+        // After animation completes, move marker back to starting point with a delay
+        setTimeout(function() {
+          teamMoveMarker.setLatLng(line[0]); // Move marker back to starting point
+        }, 2000); // Delay in milliseconds
+      }
+    });
 }
 
 // Layer 9: AHL affiliates
@@ -282,6 +396,12 @@ for (let i = 0; i < jsonData.length; i++) {
         ahlMarker.bindPopup(`<h2>${team.teamName}</h2><hr> Year Founded: ${team.year}
         <br>NHL Affiliate: ${team.nhlAffiliate}<br>ECHL Affiliate: ${team.echlAffiliate}`);
         ahlMarkers.push(ahlMarker); // Push marker to array
+
+        // Add animation to the marker with CSS
+        ahlMarker.on('click', function() {
+            ahlMarker._icon.classList.toggle('dimmed-marker'); // Dim the clicked marker
+            ahlMarker._icon.classList.toggle('highlighted-marker'); // Highlight the marker
+        });
     }
 }
 
@@ -293,6 +413,12 @@ for (let i = 0; i < jsonData.length; i++) {
         echlMarker.bindPopup(`<h2>${team.teamName}</h2><hr> Year Founded: ${team.year}
         <br>NHL Affiliate: ${team.nhlAffiliate}<br>AHL Affiliate: ${team.ahlAffiliate}`);
         echlMarkers.push(echlMarker); // Push marker to array
+
+        // Add animation to the marker with CSS
+        echlMarker.on('click', function() {
+            echlMarker._icon.classList.toggle('dimmed-marker'); // Dim the clicked marker
+            echlMarker._icon.classList.toggle('highlighted-marker'); // Highlight the marker
+        });
     }
 }
 
@@ -310,7 +436,7 @@ var overlayMaps = {
 };
 
 // Add base and overlay maps to layer control
-L.control.layers(null, overlayMaps, {
+L.control.layers(baseMaps, overlayMaps, {
 collapsed: false,
 autoZIndex: true
 }).addTo(map);
