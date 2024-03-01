@@ -1,4 +1,5 @@
-CREATE TABLE "Teams" (
+-- Create Teams table
+CREATE TABLE IF NOT EXISTS "Teams" (
   "TeamID" serial PRIMARY KEY,
   "Name" varchar,
   "Location" varchar,
@@ -10,7 +11,8 @@ CREATE TABLE "Teams" (
   "Rank" int
 );
 
-CREATE TABLE "Players" (
+-- Create Players table
+CREATE TABLE IF NOT EXISTS "Players" (
   "PlayerID" varchar PRIMARY KEY,
   "TeamID" int,
   "Name" varchar,
@@ -19,7 +21,8 @@ CREATE TABLE "Players" (
   FOREIGN KEY ("TeamID") REFERENCES "Teams" ("TeamID")
 );
 
-CREATE TABLE "PlayerTeams" (
+-- Create PlayerTeams table
+CREATE TABLE IF NOT EXISTS "PlayerTeams" (
   "PlayerID" varchar,
   "TeamID" int,
   PRIMARY KEY ("PlayerID", "TeamID"),
@@ -27,7 +30,8 @@ CREATE TABLE "PlayerTeams" (
   FOREIGN KEY ("TeamID") REFERENCES "Teams" ("TeamID")
 );
 
-CREATE TABLE "Stadiums" (
+-- Create Stadiums table
+CREATE TABLE IF NOT EXISTS "Stadiums" (
   "StadiumID" serial PRIMARY KEY,
   "Name" varchar,
   "Location" varchar,
@@ -37,7 +41,8 @@ CREATE TABLE "Stadiums" (
   "Longitude" float
 );
 
-CREATE TABLE "League_Averages" (
+-- Create League_Averages table
+CREATE TABLE IF NOT EXISTS "League_Averages" (
   "Rank" int PRIMARY KEY,
   "Season" varchar,
   "LeagueID" varchar,
@@ -52,13 +57,18 @@ CREATE TABLE "League_Averages" (
   "GAA" float
 );
 
-CREATE TABLE "Awards" (
-  "PlayerID" varchar PRIMARY KEY,
+-- Create Awards table
+CREATE TABLE IF NOT EXISTS "Awards" (
+  "UniqueID" SERIAL PRIMARY KEY,
+  "PlayerID" varchar,
   "Award" varchar,
-  "Year" int
+  "Year" int,
+  "lgID" varchar,
+  "pos" varchar
 );
 
-CREATE TABLE "Goalies" (
+-- Create Goalies table
+CREATE TABLE IF NOT EXISTS "Goalies" (
   "PlayerID" varchar PRIMARY KEY,
   "Year" int,
   "TmID" varchar UNIQUE,
@@ -69,15 +79,57 @@ CREATE TABLE "Goalies" (
   "L" int
 );
 
--- Drop the existing foreign key constraint in the Teams table (if it exists)
-ALTER TABLE "Teams" DROP CONSTRAINT IF EXISTS "Teams_TeamID_fkey";
+-- Add column to Awards table
+ALTER TABLE IF EXISTS "Awards" ADD COLUMN IF NOT EXISTS "LeagueID" varchar;
 
--- Add foreign key constraints
-ALTER TABLE "Players" ADD FOREIGN KEY ("PlayerID") REFERENCES "Awards" ("PlayerID");
+-- Drop existing foreign key constraint in Players table
+ALTER TABLE IF EXISTS "Players" DROP CONSTRAINT IF EXISTS "Players_PlayerID_fkey" CASCADE;
 
--- Add colums to Awards table
-ALTER TABLE "Awards" ADD COLUMN "Position" varchar;
-ALTER TABLE "Awards" ADD COLUMN "LeagueID" varchar;
+-- Drop existing primary key constraint in Awards table
+ALTER TABLE IF EXISTS "Awards" DROP CONSTRAINT IF EXISTS "Awards_pkey";
 
--- Add a unique constraint to awards
-ALTER TABLE "Awards" ADD CONSTRAINT "unique_award_per_player_per_year" UNIQUE ("PlayerID", "Year", "Award");
+-- Remove unique constraint on PlayerID, Year, and Award in Awards table
+ALTER TABLE IF EXISTS "Awards" DROP CONSTRAINT IF EXISTS "unique_award_per_player_per_year";
+
+-- Add UniqueID column to Awards table
+ALTER TABLE IF EXISTS "Awards" ADD COLUMN IF NOT EXISTS "UniqueID" SERIAL;
+
+-- Make UniqueID the primary key
+ALTER TABLE IF EXISTS "Awards" ADD PRIMARY KEY ("UniqueID");
+
+
+-- Remake the Awards table
+-- Drop the existing "Awards" table if needed
+DROP TABLE IF EXISTS "Awards";
+
+-- Recreate the "Awards" table with columns in the desired order
+CREATE TABLE "Awards" (
+  "UniqueID" SERIAL PRIMARY KEY,
+  "playerID" VARCHAR,
+  "award" VARCHAR,
+  "year" INT,
+  "lgID" VARCHAR,
+  "pos" VARCHAR
+);
+
+
+SELECT EXISTS (
+    SELECT 1
+    FROM information_schema.tables
+    WHERE table_name = 'Awards'
+);
+
+SELECT column_name, data_type
+FROM information_schema.columns
+WHERE table_name = 'Awards';
+
+SELECT sequence_name 
+FROM information_schema.sequences 
+WHERE sequence_schema = 'public' AND sequence_name LIKE 'awards_uniqueid_seq';
+
+SELECT sequence_name 
+FROM information_schema.sequences 
+WHERE sequence_schema = 'public' AND sequence_name = 'name';
+
+-- Find the maximum UniqueID
+SELECT MAX("UniqueID") + 1 FROM public."Awards";
