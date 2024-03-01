@@ -27,4 +27,4 @@ def csv_to_json(csv_file, json_file):
         json.dump(data, file, indent=4)
 
 # Example usage
-csv_to_json('output_files/NHL_team_file_save.csv', 'NHL_team_locations.json')
+csv_to_json('NHL_team_file_save.csv', 'NHL_team_locations.json')
