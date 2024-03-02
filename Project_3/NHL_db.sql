@@ -208,3 +208,114 @@ CREATE TABLE Player_Stats_2024 (
     FantasyPointsFantasyDraft FLOAT
 );
 
+-- Remake the Goalies table
+-- Drop the existing "Goalies" table if needed
+--DROP TABLE IF EXISTS "Player_Stats_2024";
+
+CREATE TABLE Player_Details_Active (
+    PlayerID INT PRIMARY KEY,
+    FirstName VARCHAR(255),
+    LastName VARCHAR(255),
+    Status VARCHAR(255),
+    TeamID INT,
+    Team VARCHAR(255),
+    Position VARCHAR(255),
+    Jersey FLOAT,
+    Catches VARCHAR(255),
+    Shoots VARCHAR(255),
+    Height INT,
+    Weight INT,
+    BirthDate DATE,
+    BirthCity VARCHAR(255),
+    BirthState VARCHAR(255),
+    PhotoUrl VARCHAR(255),
+    SportRadarPlayerID VARCHAR(255),
+    RotoworldPlayerID FLOAT,
+    RotoWirePlayerID FLOAT,
+    FantasyAlarmPlayerID FLOAT,
+    StatsPlayerID FLOAT,
+    SportsDirectPlayerID FLOAT,
+    XmlTeamPlayerID FLOAT,
+    InjuryStatus VARCHAR(255),
+    InjuryBodyPart VARCHAR(255),
+    InjuryStartDate DATE,
+    InjuryNotes VARCHAR(255),
+    FanDuelPlayerID FLOAT,
+    DraftKingsPlayerID FLOAT,
+    YahooPlayerID FLOAT,
+    FanDuelName VARCHAR(255),
+    DraftKingsName VARCHAR(255),
+    YahooName VARCHAR(255),
+    DepthChartPosition VARCHAR(255),
+    DepthChartOrder FLOAT,
+    GlobalTeamID INT,
+    FantasyDraftName VARCHAR(255),
+    FantasyDraftPlayerID FLOAT,
+    UsaTodayPlayerID FLOAT,
+    UsaTodayHeadshotUrl VARCHAR(255),
+    UsaTodayHeadshotNoBackgroundUrl VARCHAR(255),
+    UsaTodayHeadshotUpdated DATE,
+    UsaTodayHeadshotNoBackgroundUpdated DATE
+);
+
+-- Remake the Teams table
+-- Drop the existing "Teams" table if needed
+	DROP TABLE IF EXISTS "Teams";
+	
+	CREATE TABLE Teams_Active (
+    TeamID INT PRIMARY KEY,
+    Key VARCHAR(255),
+    Active BOOLEAN,
+    City VARCHAR(255),
+    Name VARCHAR(255),
+    StadiumID INT,
+    Conference VARCHAR(255),
+    Division VARCHAR(255),
+    PrimaryColor VARCHAR(255),
+    SecondaryColor VARCHAR(255),
+    TertiaryColor VARCHAR(255),
+    QuaternaryColor VARCHAR(255),
+    WikipediaLogoUrl VARCHAR(255),
+    WikipediaWordMarkUrl FLOAT,
+    GlobalTeamID INT,
+    HeadCoach VARCHAR(255)
+);
+
+-- Drop the original league_averages table if it exists
+DROP TABLE IF EXISTS league_averages;
+
+-- Create a new league_averages table
+CREATE TABLE league_averages (
+    Rk INT,
+    Season VARCHAR(255),
+    Lg VARCHAR(255),
+    GP INT,
+    Goals FLOAT,
+    PP FLOAT,
+    PPO FLOAT,
+    PP_percent FLOAT,
+    PK_percent FLOAT,
+    SA FLOAT,
+    SV FLOAT,
+    SV_percent FLOAT,
+    GAA FLOAT
+);
+
+-- Drop the Stadiums table if it exists
+DROP TABLE IF EXISTS Stadiums;
+
+-- Create a new Stadiums table
+CREATE TABLE Stadiums (
+	StadiumID INT PRIMARY KEY,
+	_Name VARCHAR,
+	Capacity FLOAT,
+	_Location VARCHAR,
+	GeoLat FLOAT NOT NULL,
+	GeoLong FLOAT NOT NULL,
+	Active BOOLEAN
+	
+);
+
+DROP TABLE IF EXISTS "Stadiums";
+
+ALTER TABLE stadiums RENAME TO "Stadiums";
