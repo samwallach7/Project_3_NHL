@@ -260,9 +260,9 @@ CREATE TABLE Player_Details_Active (
 
 -- Remake the Teams table
 -- Drop the existing "Teams" table if needed
-	DROP TABLE IF EXISTS "Teams";
+	DROP TABLE IF EXISTS "Teams_Active";
 	
-	CREATE TABLE Teams_Active (
+	CREATE TABLE "Teams_Active" (
     TeamID INT PRIMARY KEY,
     Key VARCHAR(255),
     Active BOOLEAN,
@@ -319,3 +319,61 @@ CREATE TABLE Stadiums (
 --DROP TABLE IF EXISTS "Stadiums";
 
 --ALTER TABLE stadiums RENAME TO "Stadiums";
+
+
+-- Remake players table directly from API endpoint
+DROP TABLE IF EXISTS "Players";
+
+CREATE TABLE Players (
+	PlayerID INT NOT NULL PRIMARY KEY,
+	FirstName VARCHAR,
+	LastName VARCHAR,
+	Status VARCHAR,
+	TeamID INT,
+	Team VARCHAR,
+	Position VARCHAR,
+	Height INT,
+	Weight INT,
+	BirthDate VARCHAR,
+	BirthPlace VARCHAR
+
+);
+-- Create Mapping table
+DROP TABLE IF EXISTS "NHL_mapping";
+
+CREATE TABLE "NHL_Mapping" (
+    year INTEGER   NOT NULL,
+    lgID VARCHAR(10)   NOT NULL,
+    tmID VARCHAR(10)   NOT NULL,
+    franchID VARCHAR(10)   NOT NULL,
+    teamName VARCHAR(50)   NOT NULL,
+    lat NUMERIC   NOT NULL,
+    long NUMERIC   NOT NULL,
+    conference VARCHAR(50)   NOT NULL,
+    totalSeasons INTEGER   NOT NULL,
+    pointPercent NUMERIC   NOT NULL,
+    playoffSeasons INTEGER   NOT NULL,
+    playoffPercent NUMERIC   NOT NULL,
+    SCAppearances INTEGER   NOT NULL,
+    StanleyCupWins INTEGER   NOT NULL,
+    active VARCHAR(10)   NOT NULL,
+    lastSeason INTEGER   NOT NULL,
+    teamChange VARCHAR(50)   NOT NULL,
+    teamChangeLat NUMERIC   NOT NULL,
+    teamChangeLong NUMERIC   NOT NULL,
+    nhlAffiliate VARCHAR(50)   NOT NULL,
+    ahlAffiliate VARCHAR(50)   NOT NULL,
+    echlAffiliate VARCHAR(50)   NOT NULL,
+	UniqueID INT NOT NULL,
+	
+	CONSTRAINT pk_NHL_Mapping PRIMARY KEY (
+		UniqueID
+	)
+
+);
+
+SELECT constraint_name, constraint_type, table_name
+FROM information_schema.table_constraints
+WHERE table_name = 'NHL_Mapping';
+
+
