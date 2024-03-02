@@ -316,6 +316,6 @@ CREATE TABLE Stadiums (
 	
 );
 
-DROP TABLE IF EXISTS "Stadiums";
+--DROP TABLE IF EXISTS "Stadiums";
 
-ALTER TABLE stadiums RENAME TO "Stadiums";
+--ALTER TABLE stadiums RENAME TO "Stadiums";
