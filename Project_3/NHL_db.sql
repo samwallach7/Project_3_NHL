@@ -151,3 +151,60 @@ CREATE TABLE "Goalies" (
   "Year" INT
 );
 
+
+-- Remake the Goalies table
+-- Drop the existing "Goalies" table if needed
+--DROP TABLE IF EXISTS "Player_Stats_2024";
+
+-- Recreate the "Goalies" table with columns in the desired order
+CREATE TABLE Player_Stats_2024 (
+    StatID INT PRIMARY KEY,
+    TeamID INT,
+    PlayerID INT,
+    SeasonType INT,
+    Season INT,
+    Name VARCHAR,
+    Team VARCHAR,
+    Position VARCHAR,
+    GlobalTeamID INT,
+    Updated TIMESTAMP,  -- Assuming 'Updated' column is in timestamp format
+    Games INT,
+    FantasyPoints FLOAT,
+    FantasyPointsFanDuel FLOAT,
+    FantasyPointsDraftKings FLOAT,
+    FantasyPointsYahoo FLOAT,
+    Minutes INT,
+    Seconds INT,
+    Goals FLOAT,
+    Assists FLOAT,
+    ShotsOnGoal FLOAT,
+    PowerPlayGoals FLOAT,
+    ShortHandedGoals FLOAT,
+    EmptyNetGoals FLOAT,
+    PowerPlayAssists FLOAT,
+    ShortHandedAssists FLOAT,
+    HatTricks FLOAT,
+    ShootoutGoals FLOAT,
+    PlusMinus FLOAT,
+    PenaltyMinutes FLOAT,
+    Blocks FLOAT,
+    Hits FLOAT,
+    Takeaways FLOAT,
+    Giveaways FLOAT,
+    FaceoffsWon FLOAT,
+    FaceoffsLost FLOAT,
+    Shifts FLOAT,
+    GoaltendingMinutes INT,
+    GoaltendingSeconds INT,
+    GoaltendingShotsAgainst FLOAT,
+    GoaltendingGoalsAgainst FLOAT,
+    GoaltendingSaves FLOAT,
+    GoaltendingWins FLOAT,
+    GoaltendingLosses FLOAT,
+    GoaltendingShutouts FLOAT,
+    Started INT,
+    BenchPenaltyMinutes FLOAT,  -- This column has NULL values
+    GoaltendingOvertimeLosses FLOAT,
+    FantasyPointsFantasyDraft FLOAT
+);
+
