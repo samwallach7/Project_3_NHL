@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ player.Name }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#" style="font-size: large; text-align: center;">NHL Dashboard</a>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Player Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="league.html">League Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="geolocation.html">Stadiums</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="draft.html">Draft</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+        {% if player %}
+        <h1 class="mt-5">{{ player.Name }}</h1>
+        <ul class="list-group mt-3">
+            <li class="list-group-item">Player ID: {{ player.PlayerID }}</li>
+            <li class="list-group-item">Shots on Goal: {{ player.ShotsOnGoal }}</li>
+            <li class="list-group-item">Assists: {{ player.Assists }}</li>
+            <li class="list-group-item">Goals: {{ player.Goals }}</li>
+            <li class="list-group-item">Position: {{ player.Position }}</li>
+            <!-- <li class="list-group-item">Birth Date: {{ player.BirthDate }}</li> -->
+            <li class="list-group-item">Blocks: {{ player.Blocks }}</li>
+            <li class="list-group-item">Hits: {{ player.Hits }}</li>
+            <!-- <li class="list-group-item">Injury Start Date: {{ player.InjuryStartDate}}</li> -->
+            <li class="list-group-item">Games: {{ player.Games }}</li>
+            <li class="list-group-item">Fantasy Points: {{ player.FantasyPoints }}</li>
+        </ul>
+        {% else %}
+        <h2> No 2024 Season Stats Available for this Player</h2>
+        {% endif %}
+    </div>
+</main>
+</body>
+</html>
