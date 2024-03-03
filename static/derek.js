@@ -82,9 +82,14 @@ function createTable(playerId) {
       const fields = ['Name', 'Assists', 'Blocks', 'FaceoffsWon', 'FantasyPoints', 'Games', 'Hits', 'Minutes', 'PenaltyMinutes', 'ShotsOnGoal', 'Takeaways', 'Updated'];
       
       fields.forEach(field => {
-        const th = document.createElement('th');
-        th.textContent = field;
-        headerRow.appendChild(th);
+          const th = document.createElement('th');
+          th.textContent = field;
+          th.style.backgroundColor = 'black';
+          th.style.color = 'white';
+          th.style.border = '1px solid white';
+          th.style.padding = '2px';
+          th.style.textAlign = 'center'
+          headerRow.appendChild(th);
       });
   
       const body = table.createTBody();
@@ -94,9 +99,13 @@ function createTable(playerId) {
           fields.forEach(field => {
             const cell = row.insertCell();
             cell.textContent = obj[field];
-          });
+            cell.style.border = '1px solid black';
+            cell.style.padding = '2px'
+            cell.style.textAlign = 'center'
+            });
+        row.style.backgroundColor = 'grey';
         }
-      });
+    });
   
       //remove existing table if it exists
       const existingTable = document.getElementById('playerTable');

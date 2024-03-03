@@ -1,2 +1,3 @@
-.DS_Store
-Project_3/config.py
+config.py
+.vscode
+__pycache__
