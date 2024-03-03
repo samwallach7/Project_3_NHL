@@ -376,4 +376,25 @@ SELECT constraint_name, constraint_type, table_name
 FROM information_schema.table_constraints
 WHERE table_name = 'NHL_Mapping';
 
+-- Drop the Teams_Active table if it exists
+DROP TABLE IF EXISTS "Teams_Active";
+
+-- Create a new Teams_Active table
+CREATE TABLE "Teams_Active" (
+    TeamID INT PRIMARY KEY,
+    Name_ VARCHAR(255) NOT NULL,
+    Abbreviation VARCHAR(10) NOT NULL,
+    City VARCHAR(255) NOT NULL,
+    StadiumID INT,
+    Conference VARCHAR(50),
+    Division VARCHAR(50),
+	HeadCoach VARCHAR,
+	ColorCode VARCHAR,
+	GlobalTeamID INT NOT NULL,
+	Active BOOLEAN
+);
+
+DROP TABLE IF EXISTS "teams_active";
+
+SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = 'public';
 
