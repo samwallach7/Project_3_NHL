@@ -54,8 +54,6 @@ def get_nhl_stats(player_id=None):
 
 # @app.route('/geolocation')
 
-# @app.route('/league')
-
 # @app.route('/draft')
 
 if __name__ == '__main__':
