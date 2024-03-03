@@ -341,8 +341,9 @@ CREATE TABLE Players (
 -- Create Mapping table
 DROP TABLE IF EXISTS "NHL_mapping";
 
-CREATE TABLE "NHL_Mapping" (
-    year INTEGER   NOT NULL,
+CREATE TABLE NHL_Mapping (
+    tmNo INTEGER   NOT NULL,
+    year_ INTEGER   NOT NULL,
     lgID VARCHAR(10)   NOT NULL,
     tmID VARCHAR(10)   NOT NULL,
     franchID VARCHAR(10)   NOT NULL,
@@ -364,12 +365,10 @@ CREATE TABLE "NHL_Mapping" (
     nhlAffiliate VARCHAR(50)   NOT NULL,
     ahlAffiliate VARCHAR(50)   NOT NULL,
     echlAffiliate VARCHAR(50)   NOT NULL,
-	UniqueID INT NOT NULL,
-	
-	CONSTRAINT pk_NHL_Mapping PRIMARY KEY (
-		UniqueID
-	)
 
+    CONSTRAINT pk_NHL_Mapping PRIMARY KEY (
+        tmNo
+     )
 );
 
 SELECT constraint_name, constraint_type, table_name
