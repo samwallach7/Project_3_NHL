@@ -27,11 +27,12 @@
         </ul>
       </div>
     </nav>
-  </header>
+  </head
+  er>
   <main>
     <div class="container">
         {% if player %}
-        <h1 class="mt-5">{{ player.Name }}</h1>
+        <h1 class="mt-5">{{ player.Name }} - {{ player.Team }}</h1>
         <ul class="list-group mt-3">
             <li class="list-group-item">Player ID: {{ player.PlayerID }}</li>
             <li class="list-group-item">Shots on Goal: {{ player.ShotsOnGoal }}</li>
