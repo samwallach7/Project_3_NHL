@@ -11,7 +11,8 @@ PLAYER_STATS_BASE_URL = f'http://127.0.0.1:5000/nhl/players/2024'
 @app.route('/')
 def index():
     players = requests.get(url).json()
-    return render_template('index.html', players=players)
+    sorted_players = sorted(players, key=lambda x: x['FirstName'])
+    return render_template('index.html', players=sorted_players)
 
 @app.route('/player', methods=['POST'])
 def player():
@@ -52,8 +53,6 @@ def get_nhl_stats(player_id=None):
     return jsonify(matching_players)
 
 # @app.route('/geolocation')
-
-# @app.route('/league')
 
 # @app.route('/draft')
 
