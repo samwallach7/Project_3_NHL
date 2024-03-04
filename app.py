@@ -77,7 +77,7 @@ def sam_team_map():
 
 @server.route('/draft')
 def draft():
-    return dash_app.index()
+    return dash_app.index()['content']
 
 if __name__ == '__main__':
     server.run(debug=True)
