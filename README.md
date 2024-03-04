@@ -41,7 +41,7 @@ New libraries used that were not covered in class
 -  anime.js was used in the team geoplotting to move the team logo from one location to the other.
 -  Dash & psycopg were used to load in the data for the NHL Draft section from the SQL database.
 
-(From above) Visuals from the Section 1 Analysis:
+(For Reference) Visuals from the Section 1 Analysis:
 -  Team Performance & Team Scoring
 <img width="362" alt="Picture2" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/51abe909-aa11-4865-a566-95953c7bf069">
 <img width="362" alt="Picture3" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/1988d037-4043-467a-9c7c-f91fd9fb2815">
