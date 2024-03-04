@@ -5,7 +5,15 @@
 -  Derek Johnson
 -  Elodie Mwamba
 
-Hockey is one of the most popular sports in North America. The National Hockey League (NHL) was founded in 1917 and has experienced significant growth and transformation over the years. As a professional league develops, teams improve every facet of their organizations, from arenas and fan engagement to coaching, player acquisition and development. There is also an improvement over time in the players themselves. Professional athletes in general have become bigger, faster, stronger and more specialized as compared to their predecessors. In Section 1 of our project, we visualized NHL data to track the progression of the league since its inception.
+Hockey is one of the most popular sports in North America. The National Hockey League (NHL) was founded in 1917 and has experienced significant growth and transformation over the years. As a professional league develops, teams improve every facet of their organizations, from arenas and fan engagement to coaching, player acquisition and development. There is also an improvement over time in the players themselves. Professional athletes across all sports have become bigger, faster, stronger and more specialized as compared to their predecessors. In Section 1 of our project, we visualized NHL data to track the progression of the league since its inception. Areas included:
+-  Team Performance
+![Fig2](https://github.com/samwallach7/Project_3_NHL/assets/148116220/cd1759fa-8730-4f25-bd92-a34c4a8e9c66)
+-  Team Scoring
+![Fig6](https://github.com/samwallach7/Project_3_NHL/assets/148116220/d4a4179b-30d7-41fa-85a8-d32bdc9791c7)
+-  Player Measurables
+<img width="361" alt="Picture1" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/03d3a897-f8d4-4efb-90ca-6d9ce58ff315">
+
+-  
 
 For this section of the project, we were interested in creating a webpage to visualize a variety of NHL data inclduing player statistics, draft selections, league standings and team geoplotting.
 
