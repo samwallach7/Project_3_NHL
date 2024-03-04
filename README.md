@@ -18,9 +18,8 @@ Player Info
 
 NHL Map
 - Select a desired layer to view filtered results such as active or defunct teams, conferences, Stanley Cup Titles, team franchise movement and minor league affilitates.
-<img width="288" alt="Picture1" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/8bec6c6d-2495-4e25-9b95-574fa145dd60">
-
 - The user can click on the logo of a team on the map to view additional team information. Clicking on the logo again will remove the popup box and unhighlight the team.
+<img width="288" alt="Picture1" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/8bec6c6d-2495-4e25-9b95-574fa145dd60">
 <img width="288" alt="Picture2" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/0f42268a-bc4c-42c8-8003-f8946ce9103d">
 
 - On the 'Franchise Movement (NHL)' layer, the user can select one of the red lines for information about a team's move, including the year and the name change. The user can also click the team logo to see the logo jump to the move destination before returning to the original spot.
