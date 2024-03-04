@@ -400,21 +400,21 @@ SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = 'public';
 -- Drop the nhl_draft_complete table if it exists
 DROP TABLE IF EXISTS "nhl_draft_complete";
 
-CREATE TABLE "nhl_draft_complete";(
-    country character varying(100) COLLATE pg_catalog."default",
+(
+    country character varying(100),
     latitude numeric(10,8),
     longitude numeric(11,8),
-    name character varying(100) COLLATE pg_catalog."default",
-    id character varying(5) COLLATE pg_catalog."default",
+    name character varying(100),
+    id character varying(5),
     year integer,
     overall_pick integer,
-    team character varying(60) COLLATE pg_catalog."default",
-    player character varying(60) COLLATE pg_catalog."default",
-    nationality character varying(2) COLLATE pg_catalog."default",
-    "position" character varying(10) COLLATE pg_catalog."default",
+    team character varying(60),
+    player character varying(60),
+    nationality character varying(2),
+    position character varying(10),
     age integer,
     to_year integer,
-    amateur_team character varying(60) COLLATE pg_catalog."default",
+    amateur_team character varying(60),
     games_played integer,
     goals integer,
     assists integer,
@@ -428,4 +428,5 @@ CREATE TABLE "nhl_draft_complete";(
     save_percentage numeric(6,2),
     goals_against_average numeric(6,2),
     point_shares numeric(6,2)
+
 );
