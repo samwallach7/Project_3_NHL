@@ -8,18 +8,18 @@ from dash import Dash, html, dcc, Input, Output
 
 server = Flask(__name__, static_folder='static')
 
-# app = Dash(__name__, server=server, url_base_pathname='/draft/')
-
 
 url = f'http://127.0.0.1:5000/nhl/players'
 PLAYER_STATS_BASE_URL = f'http://127.0.0.1:5000/nhl/players/2024'
 
+#create a landing page route to sort the players by first name
 @server.route('/')
 def index():
     players = requests.get(url).json()
     sorted_players = sorted(players, key=lambda x: x['FirstName'])
     return render_template('index.html', players=sorted_players)
 
+#loop through player data to POST the data based on the playerID form submission
 @server.route('/player', methods=['POST'])
 def player():
     player_id = request.form['player_id']
@@ -31,13 +31,7 @@ def player():
         player = None
     return render_template('player.html', player=player)
 
-# @app.route('/table', methods=['POST'])
-# def table():
-#     player_id = request.form['player_id']
-#     player_data = requests.get(url1).json()
-#     player_stats = [p for p in player_data if p['PlayerID'] == player_id]
-#     return render_template('table.html', player_stats=player_stats)
-
+#request data
 @server.route('/nhl/players')
 def get_nhl_players():
     api1 = 'https://api.sportsdata.io/v3/nhl/scores/json/Players?key=' + API_KEY
@@ -45,6 +39,7 @@ def get_nhl_players():
     players = response.json()
     return jsonify(players)
 
+#create a route to gather the data and match the playerID to player_id 
 @server.route('/nhl/players/2024/')
 @server.route('/nhl/players/2024/<player_id>')
 def get_nhl_stats(player_id=None):
@@ -73,11 +68,6 @@ def sam_data():
 def sam_team_map():
     return server.send_static_file('samTeamMap.js')
 
-
-
-# @server.route('/draft')
-# def draft():
-#     return dash_app.index()['content']
 
 if __name__ == '__main__':
     server.run(debug=True)
