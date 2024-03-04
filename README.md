@@ -10,18 +10,23 @@ Hockey is one of the most popular sports in North America. The National Hockey L
 For this section of the project, we were interested in creating a webpage to supply a variety of NHL data inclduing player statistics, draft selections and team geoplotting.
 
 The user can interact with each page in the following manner:
--  Player Info
-  -  Select a player from the dropdown list and click submit to view their general information and season statistics. To change player, select a different name from the dropdown list and resubmit.
+
+Player Info
+-  Select a player from the dropdown list and click submit to view their general information and season statistics. To change player, select a different name from the dropdown list and resubmit.
 <img width="458" alt="Screenshot 2024-03-04 at 12 07 00 PM" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/f44f2173-4a06-486e-8bea-972f0c81a166">
 <img width="158" alt="Screenshot 2024-03-04 at 12 07 15 PM" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/64a388ca-3818-4260-864a-fcae49007283">
 
+NHL Map
+- Select a desired layer to view filtered results such as active or defunct teams, conferences, Stanley Cup Titles, team franchise movement and minor league affilitates.
+- The user can click on the logo of a team on the map to view additional team information. Clicking on the logo again will remove the popup box and unhighlight the team.
+- On the 'Franchise Movement (NHL)' layer, the user can select one of the red lines for information about a team's move, including the year and the name change. The user can also click the team logo to see the logo jump to the move destination before returning to the original spot.
 
--  NHL Map
-  - Select a desired layer to view filtered results such as active or defunct teams, conferences, Stanley Cup Titles, team franchise movement and minor league affilitates.
-  - The user can click on the logo of a team on the map to view additional team information. Clicking on the logo again will remove the popup box and unhighlight the team.
-  - On the 'Franchise Movement (NHL)' layer, the user can select one of the red lines for information about a team's move, including the year and the name change. The user can also click the team logo to see the logo jump to the move destination before returning to the original spot.
--  Draft:
-  - Select a year from the dropdown list to view NHL Draft statistics such as the average age by nationality, the player count by nationality and the amount of players drafted per team. 
+Draft:
+- Select a year from the dropdown list to view NHL Draft statistics such as the average age by nationality, the player count by nationality and the amount of players drafted per team.
+<img width="612" alt="Picture11" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/adbb14f6-eecc-469b-98f3-a1b7e284e7f7">
+<img width="612" alt="Picture12" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/4d833dac-9c21-4b77-b6c4-c7b6d51162e6">
+<img width="612" alt="Picture13" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/b8996051-9e48-4384-9b35-da043306063e">
+
 
 Ethical considerations
 nmnmnmnmnmnmnmnm
