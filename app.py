@@ -8,7 +8,7 @@ from dash import Dash, html, dcc, Input, Output
 
 server = Flask(__name__, static_folder='static')
 
-app = Dash(__name__, server=server, url_base_pathname='/draft/')
+# app = Dash(__name__, server=server, url_base_pathname='/draft/')
 
 
 url = f'http://127.0.0.1:5000/nhl/players'
@@ -75,9 +75,9 @@ def sam_team_map():
 
 
 
-@server.route('/draft')
-def draft():
-    return dash_app.index()['content']
+# @server.route('/draft')
+# def draft():
+#     return dash_app.index()['content']
 
 if __name__ == '__main__':
     server.run(debug=True)
