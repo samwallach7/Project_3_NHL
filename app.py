@@ -1,8 +1,8 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 import requests
 from config import API_KEY
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 
 url = f'http://127.0.0.1:5000/nhl/players'
@@ -52,7 +52,22 @@ def get_nhl_stats(player_id=None):
 
     return jsonify(matching_players)
 
-# @app.route('/geolocation')
+# Route to serve the geolocation.html file
+@app.route('/geolocation')
+def geolocation():
+    return render_template('geolocation.html')
+
+# Route to serve the samData.js file
+@app.route('/samData.js')
+def sam_data():
+    return app.send_static_file('samData.js')
+
+# Route to serve the samTeamMap.js file
+@app.route('/samTeamMap.js')
+def sam_team_map():
+    return app.send_static_file('samTeamMap.js')
+
+
 
 # @app.route('/draft')
 
