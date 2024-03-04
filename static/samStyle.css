@@ -8,7 +8,7 @@ body {
 #map,
 body,
 html {
-  height: 100%;
+  height: 80%;
 }
 .highlighted-marker {
   border: 3px solid yellow; /* Change border to yellow to highlight the marker */
