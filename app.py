@@ -3,11 +3,12 @@ from flask import Flask, render_template, request, jsonify, send_from_directory
 import requests
 from config import API_KEY
 from Elodie4 import app as dash_app
+from dash import Dash, html, dcc, Input, Output
 
 
 server = Flask(__name__, static_folder='static')
 
-app = Dash(__name__, server=server, url_base_pathname='/draft')
+app = Dash(__name__, server=server, url_base_pathname='/draft/')
 
 
 url = f'http://127.0.0.1:5000/nhl/players'
