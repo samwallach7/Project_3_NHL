@@ -9,10 +9,16 @@ Hockey is one of the most popular sports in North America. The National Hockey L
 -  Team Performance & Team Scoring
 <img width="362" alt="Picture2" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/51abe909-aa11-4865-a566-95953c7bf069">
 <img width="362" alt="Picture3" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/1988d037-4043-467a-9c7c-f91fd9fb2815">
--  Player Measurables
-<img width="361" alt="Picture1" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/03d3a897-f8d4-4efb-90ca-6d9ce58ff315">
 
--  
+-  Player Measurables & Awards
+<img width="361" alt="Picture1" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/03d3a897-f8d4-4efb-90ca-6d9ce58ff315">
+<img width="699" alt="Picture6" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/f9ee00e7-5e79-4451-8b07-cd1fc8758403">
+
+-  Fan Attendance
+<img width="418" alt="Picture4" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/cb6e5146-7a03-444c-8466-21925ff7fceb">
+
+-  Country Representation in the NHL Draft
+<img width="486" alt="Picture5" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/2d717a25-c5b2-4dc9-a9eb-f2387bade54b">
 
 For this section of the project, we were interested in creating a webpage to visualize a variety of NHL data inclduing player statistics, draft selections, league standings and team geoplotting.
 
