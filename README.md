@@ -7,7 +7,7 @@
 
 Hockey is one of the most popular sports in North America. The National Hockey League (NHL) was founded in 1917 and has experienced significant growth and transformation over the years. As a professional league develops, teams improve every facet of their organizations, from arenas and fan engagement to coaching, player acquisition and development. There is also an improvement over time in the players themselves. Professional athletes across all sports have become bigger, faster, stronger and more specialized as compared to their predecessors. In Section 1 of our project, we visualized NHL data to track the progression of the league since its inception (see bottom for recap). 
 
-For this section of the project, we were interested in creating a webpage to supply a variety of NHL data inclduing player statistics, draft selections and team geoplotting.
+For this section of the project, we were interested in creating a webpage to supply a variety of NHL data including player statistics, draft selections and team geoplotting.
 
 The user can interact with each page in the following manner:
 
@@ -31,21 +31,18 @@ Draft:
 <img width="612" alt="Picture12" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/4d833dac-9c21-4b77-b6c4-c7b6d51162e6">
 <img width="612" alt="Picture13" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/b8996051-9e48-4384-9b35-da043306063e">
 
+Data Sources & Ethical Considerations
 
-Ethical considerations
-nmnmnmnmnmnmnmnm
-
-We utilized a set of files that track a variety of NHL statistics. Datasets include:
--  Team performance
--  Player scoring (SportsDataIO)
--  NHL Draft results
+-  We chose to utilize data from a Kaggle Professional Hockey Database and a SportsDataIO API integration. This data was used as it appeared without any other manipulation. The set of files that tracked a variety of NHL statistics included: team performance, player scoring, and NHL Draft results. Eliminating any possible biases and showcasing the diversity of the player pool was an important consideration when putting together the NHL Draft page. On the NHL Map, we felt an importance in plotting all of the professional hockey teams at the higher levels of the sport and not just the NHL teams. This helps to show the access that fans in varying markets in the U.S. and Canada have to the professional game.
 
 Database Design
--  We utilized ETL workflows to pull the data from its original source, transform the data if necessary, and the save the datasets as tables in a SQL database. We then pulled the data in from this database for use on the various pages. We chose to use a SQL database because _____________. The project's ERD is available within this repository.
+-  We utilized ETL workflows to pull the data from its original source, transform the data if necessary, and the save the datasets as tables in a SQL database. We then pulled the data in from this database for use on the various pages. We chose to use a SQL database because of the ease in working with csv files, which was the majority of our data. The project's ERD is available within this repository.
 
-New library not covered in class: The anime.js library was used in the team geoplotting to move the team logo from one location to the other.
+New libraries used that were not covered in class
+-  anime.js was used in the team geoplotting to move the team logo from one location to the other.
+-  Dash & psycopg were used to load in the data for the NHL Draft section from the SQL database.
 
-Section 1 Analysis included:
+(From above) Visuals from the Section 1 Analysis:
 -  Team Performance & Team Scoring
 <img width="362" alt="Picture2" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/51abe909-aa11-4865-a566-95953c7bf069">
 <img width="362" alt="Picture3" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/1988d037-4043-467a-9c7c-f91fd9fb2815">
