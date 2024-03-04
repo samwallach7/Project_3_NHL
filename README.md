@@ -11,7 +11,8 @@ Hockey is one of the most popular sports in North America. The National Hockey L
 <img width="362" alt="Picture3" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/1988d037-4043-467a-9c7c-f91fd9fb2815">
 
 -  Player Measurables & Awards
-<img width="361" alt="Picture1" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/03d3a897-f8d4-4efb-90ca-6d9ce58ff315"><img width="699" alt="Picture6" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/f9ee00e7-5e79-4451-8b07-cd1fc8758403">
+<img width="361" alt="Picture1" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/03d3a897-f8d4-4efb-90ca-6d9ce58ff315">
+<img width="377" alt="Picture7" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/8de9475b-7334-415d-b986-e7ffac464b37">
 
 -  Fan Attendance
 <img width="418" alt="Picture4" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/cb6e5146-7a03-444c-8466-21925ff7fceb">
