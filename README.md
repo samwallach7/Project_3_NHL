@@ -12,8 +12,9 @@ For this section of the project, we were interested in creating a webpage to sup
 The user can interact with each page in the following manner:
 -  Player Info
  -  Select a player from the dropdown list and click submit to view their general information and season statistics. To change player, select a different name from the dropdown list and resubmit.
-<img width="333" alt="Picture9" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/ff691b9e-5f60-4a90-8155-e30e18ca4796">
-<img width="325" alt="Picture10" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/3e895300-09c8-423d-9767-7bb54234210e">
+<img width="458" alt="Screenshot 2024-03-04 at 12 07 00 PM" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/f44f2173-4a06-486e-8bea-972f0c81a166">
+<img width="158" alt="Screenshot 2024-03-04 at 12 07 15 PM" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/64a388ca-3818-4260-864a-fcae49007283">
+
 
 -  NHL Map
  - Select a desired layer to view filtered results such as active or defunct teams, conferences, Stanley Cup Titles, team franchise movement and minor league affilitates.
