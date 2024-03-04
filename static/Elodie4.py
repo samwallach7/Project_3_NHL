@@ -1,4 +1,6 @@
-import psycopg  # Corrected import statement
+#Import Dependencies 
+
+import psycopg  
 import pandas as pd
 from dash import Dash, html, dcc, Input, Output
 import plotly.express as px
@@ -6,16 +8,15 @@ from config import username, password
 
 # Database connection parameters
 db_host = '127.0.0.1'
-db_name = 'Hockey_Data_Project_3'  # Ensure your DB name is correctly formatted
+db_name = 'Hockey_Data_Project_3' 
 
-# Establish a database connection using psycopg2
+# Establish a database connection using psycopg
 conn = psycopg.connect(
     host="localhost",
     dbname="Hockey_Data_Project 3",
     user=username,
     password=password
 )
-
 # SQL query to retrieve data
 query = "SELECT * FROM nhldraft_complete"
 nhl_complete_df = pd.read_sql_query(query, conn)
@@ -70,7 +71,7 @@ nationality_code = {
     'PY': 'Paraguay',
     'VE': 'Venezuela'
 }
-# Your existing mapping
+# Turn it into a dataframe
 
 nationality_code_df = pd.DataFrame.from_dict(nationality_code, orient='index', columns=['name']).reset_index()
 nationality_code_df.columns = ['code', 'name']
@@ -89,14 +90,14 @@ app.layout = html.Div([
     dcc.Dropdown(
         id='year-dropdown',
         options=[{'label': str(year), 'value': year} for year in unique_years],
-        value=unique_years[0],  # Default value
+        value=unique_years[0],  
         style={'width': '50%'}
     ),
-    html.Div([  # This div contains both graph1 and graph2
+    html.Div([  
         dcc.Graph(id='graph1'),
         dcc.Graph(id='graph2')
     ], style={'display': 'flex', 'flex-direction': 'column'}),  # Style applies to the div above
-    dcc.Graph(id='graph3')  # This is outside the inner div and directly in the main div
+    dcc.Graph(id='graph3')  
 ], style={'display': 'flex', 'flex-direction': 'column'})  # This style applies to the outermost div
 
 
