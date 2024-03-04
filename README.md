@@ -18,8 +18,13 @@ Player Info
 
 NHL Map
 - Select a desired layer to view filtered results such as active or defunct teams, conferences, Stanley Cup Titles, team franchise movement and minor league affilitates.
+![Screenshot 2024-03-04 at 12 14 05 PM](https://github.com/samwallach7/Project_3_NHL/assets/148116220/cb490015-ffd2-4add-af44-98bbc577afdb)
+
 - The user can click on the logo of a team on the map to view additional team information. Clicking on the logo again will remove the popup box and unhighlight the team.
+![Screenshot 2024-03-04 at 12 14 30 PM](https://github.com/samwallach7/Project_3_NHL/assets/148116220/3229a288-fb31-462c-a208-6b6a78495f2e)
+
 - On the 'Franchise Movement (NHL)' layer, the user can select one of the red lines for information about a team's move, including the year and the name change. The user can also click the team logo to see the logo jump to the move destination before returning to the original spot.
+![Screenshot 2024-03-04 at 12 15 22 PM](https://github.com/samwallach7/Project_3_NHL/assets/148116220/a3e75cf8-a857-402c-ba58-c2b423cf4a82)
 
 Draft:
 - Select a year from the dropdown list to view NHL Draft statistics such as the average age by nationality, the player count by nationality and the amount of players drafted per team for that draft year.
