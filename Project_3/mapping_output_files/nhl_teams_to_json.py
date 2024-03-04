@@ -9,7 +9,8 @@ def csv_to_json(csv_file, json_file):
 
     # Convert certain columns to numbers
     for row in data:
-        row['year'] = int(row['year'])
+        row['tmNo'] = int(row['tmNo'])
+        row['year_'] = int(row['year_'])
         row['lat'] = float(row['lat'])
         row['long'] = float(row['long'])
         row['totalSeasons'] = int(row['totalSeasons'])
