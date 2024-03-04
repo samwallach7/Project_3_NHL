@@ -189,7 +189,8 @@ for (let i = 0; i < jsonData.length; i++) {
         let activeMarker = L.marker([team.lat, team.long], { icon: getCustomIcon(team) });
         activeMarker.bindPopup(`<h2>${team.teamName}</h2> <hr> Year Founded: ${team.year_}
         <br>Conference: ${team.conference}<br>Total Seasons: ${team.totalSeasons}
-        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
+        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Games Earning Points: ${team.pointPercent}
+        <br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         teamMarkers.push(activeMarker); // Push marker to array
 
@@ -208,7 +209,8 @@ for (let i = 0; i < jsonData.length; i++) {
         let ecMarker = L.marker([team.lat, team.long], { icon: getCustomIcon(team) });
         ecMarker.bindPopup(`<h2>${team.teamName}</h2> <hr> Year Founded: ${team.year_}
         <br>Conference: ${team.conference}<br>Total Seasons: ${team.totalSeasons}
-        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
+        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Games Earning Points: ${team.pointPercent}
+        <br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         ecMarkers.push(ecMarker); // Push marker to array
 
@@ -227,7 +229,8 @@ for (let i = 0; i < jsonData.length; i++) {
         let wcMarker = L.marker([team.lat, team.long], { icon: getCustomIcon(team) });
         wcMarker.bindPopup(`<h2>${team.teamName}</h2> <hr> Year Founded: ${team.year_}
         <br>Conference: ${team.conference}<br>Total Seasons: ${team.totalSeasons}
-        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
+        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Games Earning Points: ${team.pointPercent}
+        <br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         wcMarkers.push(wcMarker); // Push marker to array
 
@@ -246,7 +249,8 @@ for (let i = 0; i < jsonData.length; i++) {
         let scMarker = L.marker([team.lat, team.long], { icon: getCustomIcon(team) });
         scMarker.bindPopup(`<h2>${team.teamName}</h2> <hr> Year Founded: ${team.year_}
         <br>Conference: ${team.conference}<br>Total Seasons: ${team.totalSeasons}
-        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
+        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Games Earning Points: ${team.pointPercent}
+        <br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         scMarkers.push(scMarker); // Push marker to array
 
@@ -265,7 +269,8 @@ for (let i = 0; i < jsonData.length; i++) {
         let playoffMarker = L.marker([team.lat, team.long], { icon: getCustomIcon(team) });
         playoffMarker.bindPopup(`<h2>${team.teamName}</h2> <hr> Year Founded: ${team.year_}
         <br>Conference: ${team.conference}<br>Total Seasons: ${team.totalSeasons}
-        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
+        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Games Earning Points: ${team.pointPercent}
+        <br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         playoffMarkers.push(playoffMarker); // Push marker to array
 
@@ -284,7 +289,8 @@ for (let i = 0; i < jsonData.length; i++) {
         let seasonsMarker = L.marker([team.lat, team.long], { icon: getCustomIcon(team) });
         seasonsMarker.bindPopup(`<h2>${team.teamName}</h2> <hr> Year Founded: ${team.year_}
         <br>Conference: ${team.conference}<br>Total Seasons: ${team.totalSeasons}
-        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Seasons in Playoffs: ${team.playoffPercent}
+        <br>Playoff Seasons: ${team.playoffSeasons}<br>Percent of Games Earning Points: ${team.pointPercent}
+        <br>Percent of Seasons in Playoffs: ${team.playoffPercent}
         <br>Stanley Cup Appearances: ${team.SCAppearances}<br>Stanley Cup Titles: ${team.StanleyCupWins}`);
         seasonsMarkers.push(seasonsMarker); // Push marker to array
 
