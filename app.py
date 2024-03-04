@@ -60,12 +60,12 @@ def geolocation():
 # Route to serve the samData.js file
 @server.route('/samData.js')
 def sam_data():
-    return app.send_static_file('samData.js')
+    return server.send_static_file('samData.js')
 
 # Route to serve the samTeamMap.js file
 @server.route('/samTeamMap.js')
 def sam_team_map():
-    return app.send_static_file('samTeamMap.js')
+    return server.send_static_file('samTeamMap.js')
 
 
 
