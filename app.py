@@ -2,19 +2,19 @@ from flask import Flask, render_template, request, jsonify, send_from_directory
 import requests
 from config import API_KEY
 
-app = Flask(__name__, static_folder='static')
+server = Flask(__name__, static_folder='static')
 
 
 url = f'http://127.0.0.1:5000/nhl/players'
 PLAYER_STATS_BASE_URL = f'http://127.0.0.1:5000/nhl/players/2024'
 
-@app.route('/')
+@server.route('/')
 def index():
     players = requests.get(url).json()
     sorted_players = sorted(players, key=lambda x: x['FirstName'])
     return render_template('index.html', players=sorted_players)
 
-@app.route('/player', methods=['POST'])
+@server.route('/player', methods=['POST'])
 def player():
     player_id = request.form['player_id']
     player_url = f'{PLAYER_STATS_BASE_URL}/{player_id}'
@@ -32,15 +32,15 @@ def player():
 #     player_stats = [p for p in player_data if p['PlayerID'] == player_id]
 #     return render_template('table.html', player_stats=player_stats)
 
-@app.route('/nhl/players')
+@server.route('/nhl/players')
 def get_nhl_players():
     api1 = 'https://api.sportsdata.io/v3/nhl/scores/json/Players?key=' + API_KEY
     response = requests.get(api1)
     players = response.json()
     return jsonify(players)
 
-@app.route('/nhl/players/2024/')
-@app.route('/nhl/players/2024/<player_id>')
+@server.route('/nhl/players/2024/')
+@server.route('/nhl/players/2024/<player_id>')
 def get_nhl_stats(player_id=None):
     api2 = 'https://api.sportsdata.io/v3/nhl/stats/json/PlayerSeasonStats/2024?key=' + API_KEY
     response = requests.get(api2)
@@ -53,17 +53,17 @@ def get_nhl_stats(player_id=None):
     return jsonify(matching_players)
 
 # Route to serve the geolocation.html file
-@app.route('/geolocation')
+@server.route('/geolocation')
 def geolocation():
     return render_template('geolocation.html')
 
 # Route to serve the samData.js file
-@app.route('/samData.js')
+@server.route('/samData.js')
 def sam_data():
     return app.send_static_file('samData.js')
 
 # Route to serve the samTeamMap.js file
-@app.route('/samTeamMap.js')
+@server.route('/samTeamMap.js')
 def sam_team_map():
     return app.send_static_file('samTeamMap.js')
 
@@ -72,4 +72,4 @@ def sam_team_map():
 # @app.route('/draft')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    server.run(debug=True)
