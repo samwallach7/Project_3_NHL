@@ -22,7 +22,7 @@ NHL Map
 - On the 'Franchise Movement (NHL)' layer, the user can select one of the red lines for information about a team's move, including the year and the name change. The user can also click the team logo to see the logo jump to the move destination before returning to the original spot.
 
 Draft:
-- Select a year from the dropdown list to view NHL Draft statistics such as the average age by nationality, the player count by nationality and the amount of players drafted per team.
+- Select a year from the dropdown list to view NHL Draft statistics such as the average age by nationality, the player count by nationality and the amount of players drafted per team for that draft year.
 <img width="612" alt="Picture11" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/adbb14f6-eecc-469b-98f3-a1b7e284e7f7">
 <img width="612" alt="Picture12" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/4d833dac-9c21-4b77-b6c4-c7b6d51162e6">
 <img width="612" alt="Picture13" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/b8996051-9e48-4384-9b35-da043306063e">
