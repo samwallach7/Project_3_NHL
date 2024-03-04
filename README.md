@@ -6,10 +6,9 @@
 -  Elodie Mwamba
 
 Hockey is one of the most popular sports in North America. The National Hockey League (NHL) was founded in 1917 and has experienced significant growth and transformation over the years. As a professional league develops, teams improve every facet of their organizations, from arenas and fan engagement to coaching, player acquisition and development. There is also an improvement over time in the players themselves. Professional athletes across all sports have become bigger, faster, stronger and more specialized as compared to their predecessors. In Section 1 of our project, we visualized NHL data to track the progression of the league since its inception. Areas included:
--  Team Performance
-![Fig2](https://github.com/samwallach7/Project_3_NHL/assets/148116220/cd1759fa-8730-4f25-bd92-a34c4a8e9c66)
--  Team Scoring
-![Fig6](https://github.com/samwallach7/Project_3_NHL/assets/148116220/d4a4179b-30d7-41fa-85a8-d32bdc9791c7)
+-  Team Performance & Team Scoring
+<img width="362" alt="Picture2" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/51abe909-aa11-4865-a566-95953c7bf069">
+<img width="362" alt="Picture3" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/1988d037-4043-467a-9c7c-f91fd9fb2815">
 -  Player Measurables
 <img width="361" alt="Picture1" src="https://github.com/samwallach7/Project_3_NHL/assets/148116220/03d3a897-f8d4-4efb-90ca-6d9ce58ff315">
 
